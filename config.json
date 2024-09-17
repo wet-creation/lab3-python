@@ -1,0 +1,8 @@
+{
+  "text_file": "input.txt",
+  "target_language": "uk",
+  "output": "file",
+  "max_chars": 600,
+  "max_words": 100,
+  "max_sentences": 5
+}
