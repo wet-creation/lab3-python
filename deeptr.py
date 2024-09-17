@@ -5,10 +5,11 @@ text = input("Input text: ")
 
 result = dt.LangDetect(text)
 print(result)
+lang = "ukrainian"
+code_lang = dt.CodeLang(lang)
+print(f"code = {code_lang} lang = {lang}")
 
-target_lang = input("Input the language you want to translate: ")
-
-translation = dt.TransLate(text, target_lang)
+translation = dt.TransLate(text, code_lang)
 print(f"Translated text: {translation}")
 print("Proceed language list")
 print(dt.LanguageList(text = text))

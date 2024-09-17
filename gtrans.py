@@ -11,10 +11,11 @@ if isinstance(result, tuple) and len(result) == 2:
         print(f"Language: {gt.CodeLang(detected_lang)} (confidence not determined)")
 else:
     print(result)
+lang = "ukrainian"
+code_lang = gt.CodeLang(lang)
+print(f"code = {code_lang} lang = {lang}")
 
-target_lang = input("Input the language you want to translate: ")
-
-translation = gt.TransLate(text, target_lang)
+translation = gt.TransLate(text, lang)
 print(f"Translated text: {translation}")
 print("Proceed language list")
 print(gt.LanguageList(text = text))

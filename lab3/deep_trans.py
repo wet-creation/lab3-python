@@ -1,7 +1,7 @@
 from deep_translator import GoogleTranslator
 from langdetect import detect_langs, DetectorFactory
 
-LANGUAGES = GoogleTranslator().get_supported_languages(as_dict= True)
+LANGUAGES = GoogleTranslator().get_supported_languages(as_dict = True)
 LANGUAGES = dict((v,k) for k,v in LANGUAGES.items())
 DetectorFactory.seed = 8734763
 
@@ -56,7 +56,7 @@ def LanguageList(out="screen", text=""):
             try:
                 translated_text = TransLate(text, lang_code)
             except Exception as e:
-                return f"Translation error {language}: {e}"
+                return f"Translation error {name}: {e}"
 
             row.append(translated_text.ljust(col_widths[3]))
         table.append(row)
